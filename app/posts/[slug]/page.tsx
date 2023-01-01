@@ -18,12 +18,12 @@ export default function PostPage(props: any) {
   const post = getPostContent(slug);
   return (
     <div>
-      <div className="my-12 rounded-md bg-neutral-800 p-4 text-center drop-shadow-lg">
+      <div className="my-12 rounded-md bg-gray-100 dark:bg-neutral-800 p-4 text-center drop-shadow-lg">
         <h1 className="text-2xl text-emerald-500">{post.data.title}</h1>
-        <p className="mt-2 text-slate-400">{post.data.date}</p>
+        <p className="mt-2 text-slate-600 dark:text-slate-400">{post.data.date}</p>
       </div>
 
-      <article className="prose prose-invert prose-headings:text-[#a4885c]">
+      <article className="prose dark:prose-invert prose-headings:text-[#a4885c]">
         <Markdown>{post.content}</Markdown>
       </article>
     </div>

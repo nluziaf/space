@@ -7,13 +7,9 @@ const font = Atkinson_Hyperlegible({
   subsets: ["latin"],
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   const header = (
-    <header className="my-6 flex items-center space-x-6 rounded-md bg-neutral-800 p-4 drop-shadow-lg">
+    <header className="my-6 flex items-center space-x-6 rounded-md bg-gray-100 dark:bg-neutral-800 p-4 drop-shadow-lg">
       <Link
         href="/"
         className="text-xl font-bold text-emerald-500 transition duration-200 hover:text-[#a4885c]"
@@ -36,11 +32,11 @@ export default function RootLayout({
   return (
     <html lang="en" className={font.className}>
       <head />
-      <body className="mx-auto max-w-2xl bg-neutral-900 px-6 pb-6 text-neutral-300">
-        {header}
-        {children}
-        {footer}
-      </body>
+        <body className="mx-auto max-w-2xl bg-gray-200 dark:bg-neutral-900 px-6 pb-6 dark:text-neutral-300">
+          {header}
+          {children}
+          {footer}
+        </body>
     </html>
   );
 }

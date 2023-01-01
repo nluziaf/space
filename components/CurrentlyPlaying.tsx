@@ -16,7 +16,7 @@ export default function CurrentlyPlaying() {
   }
 
   return (
-    <div className="rounded-md border border-transparent bg-[#a4885c] bg-opacity-5 p-4 transition duration-200 hover:border-[#a4885c]">
+    <div className="rounded-md border border-transparent bg-[#a4885c] bg-opacity-20 dark:bg-opacity-5 p-4 transition duration-200 hover:border-[#a4885c]">
       <Link href={lastFM.song.url}>
         <div>
           <p className="text-2xl text-[#a4885c]">NLuziaf is listening to:</p>
